@@ -1,0 +1,4 @@
+O slider funciona repetindo os caractéres "-" e "=", o caractére "-" é repetido por
+10 - o volume atual, sendo assim ele só pode existir enquanto o volume for menor que
+10 e ele vai se repetindo até se deparar com o volume atual, que é o caractére "=",
+e ele se repete pelo número de vezes do volume atual

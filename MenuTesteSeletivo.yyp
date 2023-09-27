@@ -1,0 +1,52 @@
+{
+  "resourceType": "GMProject",
+  "resourceVersion": "1.7",
+  "name": "MenuTesteSeletivo",
+  "AudioGroups": [
+    {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
+  ],
+  "configs": {
+    "children": [],
+    "name": "Default",
+  },
+  "defaultScriptType": 1,
+  "Folders": [
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Docs","folderPath":"folders/Docs.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fonts","folderPath":"folders/Fonts.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Game","folderPath":"folders/Game.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/Game/Scripts.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"GUI","folderPath":"folders/GUI.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scenes","folderPath":"folders/Scenes.yy",},
+  ],
+  "IncludedFiles": [],
+  "isEcma": false,
+  "LibraryEmitters": [],
+  "MetaData": {
+    "IDEVersion": "2023.8.1.102",
+  },
+  "resources": [
+    {"id":{"name":"DrawText","path":"scripts/DrawText/DrawText.yy",},},
+    {"id":{"name":"rm_settings","path":"rooms/rm_settings/rm_settings.yy",},},
+    {"id":{"name":"Script draw text","path":"notes/Script draw text/Script draw text.yy",},},
+    {"id":{"name":"rm_gameplay","path":"rooms/rm_gameplay/rm_gameplay.yy",},},
+    {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
+    {"id":{"name":"Script math","path":"notes/Script math/Script math.yy",},},
+    {"id":{"name":"Script mouse input","path":"notes/Script mouse input/Script mouse input.yy",},},
+    {"id":{"name":"Math","path":"scripts/Math/Math.yy",},},
+    {"id":{"name":"Popup de saída","path":"notes/Popup de saída/Popup de saída.yy",},},
+    {"id":{"name":"Slider","path":"notes/Slider/Slider.yy",},},
+    {"id":{"name":"MouseInput","path":"scripts/MouseInput/MouseInput.yy",},},
+    {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
+    {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
+    {"id":{"name":"fnt_menu","path":"fonts/fnt_menu/fnt_menu.yy",},},
+  ],
+  "RoomOrderNodes": [
+    {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
+    {"roomId":{"name":"rm_gameplay","path":"rooms/rm_gameplay/rm_gameplay.yy",},},
+    {"roomId":{"name":"rm_settings","path":"rooms/rm_settings/rm_settings.yy",},},
+  ],
+  "templateType": "game",
+  "TextureGroups": [
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
+  ],
+}

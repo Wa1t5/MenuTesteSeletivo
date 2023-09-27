@@ -1,0 +1,7 @@
+O script math serve para simplificar o código e remover muitas repetições
+por exemplo ao invés de fazer:
+	pos_x = nova_posicao_x;
+	pos_y = nova_posicao_y;
+Eu posso simplesmente fazer: 
+	pos.set(nova_posicao.x, nova_posicao.y);
+	

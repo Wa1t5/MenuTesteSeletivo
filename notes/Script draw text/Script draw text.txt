@@ -1,0 +1,2 @@
+O script draw text serve simplesmente para abstrair algumas das etapas necessárias
+para se definir a fonte, posição e alinhamento na hora de desenhar o texto na tela

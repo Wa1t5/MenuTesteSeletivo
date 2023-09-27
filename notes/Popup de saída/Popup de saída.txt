@@ -1,0 +1,2 @@
+Para o popup de saida eu utilizei o objeto de menu em uma outra layer
+para simplicidade
