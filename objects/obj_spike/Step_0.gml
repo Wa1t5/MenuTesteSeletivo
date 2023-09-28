@@ -19,8 +19,7 @@ if (instance_exists(obj_player)) {
 									x, y + (( y >= room_height / 2) ? 256 : 0),
 									x + 32, y + (( y <= room_height  /2) ? 256 : 0));
 
-
-	if (_col) {
+	if (_col && !instance_exists(obj_popup)) {
 		// Destroy player
 		instance_destroy(obj_player);
 		

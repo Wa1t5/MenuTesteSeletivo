@@ -10,7 +10,7 @@ if (global.speed > 0) {
 } else vspeed = 0;
 
 // Game over if the player is outside screen
-if (y < -32 || y > room_height + 32) {
+if (y < -32 || y > room_height + 32) && (!instance_exists(obj_popup)) {
 		// Game over popup
 		instance_create_layer(x, y, "PopUP", obj_popup, global.game_over_popup);
 		

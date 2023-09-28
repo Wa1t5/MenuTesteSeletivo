@@ -1,12 +1,12 @@
 {
   "FolderOrderSettings": [
+    {"name":"Game","order":2,"path":"folders/Game.yy",},
     {"name":"Docs","order":4,"path":"folders/Game/Docs.yy",},
     {"name":"Fonts","order":3,"path":"folders/Game/Fonts.yy",},
-    {"name":"Game","order":2,"path":"folders/Game.yy",},
     {"name":"GUI","order":2,"path":"folders/Game/GUI.yy",},
     {"name":"Scenes","order":5,"path":"folders/Game/Scenes.yy",},
-    {"name":"Player","order":6,"path":"folders/Player.yy",},
     {"name":"Obstacles","order":7,"path":"folders/Obstacles.yy",},
+    {"name":"Player","order":6,"path":"folders/Player.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"DrawText","order":1,"path":"scripts/DrawText/DrawText.yy",},
