@@ -3,24 +3,32 @@
 // Only run if no popups exist (this means that the game is unpaused)
 if (!instance_exists(obj_popup)) {
 	// Start timer
-	spawner_timer ??= current_time + (spawner_timer_def - global.score * 10);
+	spawner_timer ??= current_time + (spawner_timer_def - global.score * 2);
 
 	// Spawn spikes
 	if (current_time >= spawner_timer) { 
-		// UP
-		var _random_pos = new Vector2(	room_width + 64,
-										irandom_range(-128, 16));
+		
+		var _random_pos = new Vector2(room_width + 64);
+		
+		for (var _i = 0; _i <= global.score + 1; _i++) {
+			// UP
+			_random_pos.set(	_random_pos.x * 2,
+								irandom_range(-128, 8));
 									
-		instance_create_layer(_random_pos.x, _random_pos.y, "Instances", obj_spike);
+			instance_create_layer(_random_pos.x, _random_pos.y, "Obstacles", obj_spike);
 	
-		// Down
-		_random_pos.set(	room_width + 64,
-							irandom_range(room_height - 256, room_height));
-						
-		instance_create_layer(_random_pos.x, _random_pos.y, "Instances", obj_spike);
-	
-		// Cleanup
-		delete _random_pos;
+			// Down
+			_random_pos.y = irandom_range(room_height - 256, room_height - 32);
+			instance_create_layer(_random_pos.x, _random_pos.y, "Obstacles", obj_spike);
+			
+			// Stop loop after we spawned 10 spikes
+			if (_i >= 10) {
+				delete _random_pos;
+				break;
+			}
+		}
+		
+		// Reset timer
 		spawner_timer = undefined;
 	}
 

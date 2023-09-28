@@ -4,7 +4,7 @@
 if (x <= -128) instance_destroy(self);
 
 // Pause 
-hspeed = (global.speed > 0) ? -3 * (global.score + 1) / 2 : global.speed;
+hspeed = (global.speed > 0) ? -spd - global.score * .1 : global.speed;
 
 if (instance_exists(obj_player)) {
 	// Increase player score
@@ -15,9 +15,9 @@ if (instance_exists(obj_player)) {
 
 	// Col
 	var _col = point_in_triangle(	obj_player.x, obj_player.y,
-									x - 32, y + (( y <= room_height / 2) ? 256 : 0),
-									x, y + (( y >= room_height / 2) ? 256 : 0),
-									x + 32, y + (( y <= room_height  /2) ? 256 : 0));
+									x - 128, y + (( y <= room_height / 2) ? 0 : 256),
+									x, y + (( y >= room_height / 2) ? -32 : 272),
+									x + 128, y + (( y <= room_height / 2) ? 0 : 256));
 
 	if (_col && !instance_exists(obj_popup)) {
 		// Destroy player

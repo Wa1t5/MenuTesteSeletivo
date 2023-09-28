@@ -1,7 +1,10 @@
 #region Gui info
 	#macro OFFSET 64
+	
 	#macro GUI_WIDTH display_get_gui_width()
 	#macro GUI_HEIGHT display_get_gui_height()
+	
+	#macro BUTTON_HEIGHT 40
 #endregion
 
 #region Game options
@@ -14,13 +17,15 @@
 #region Game Menus
 	global.game_over_popup = {
 		title: "Game Over!",
+		escape_action : undefined,
+
 		buttons : [
 			{
 				title : "Tentar denovo",
-				
+			
 				// Button hitbox
 				col : new Clickable(new Vector2(GUI_WIDTH * .5, GUI_HEIGHT * .5 + OFFSET * 0),
-									new Vector2(64 * 4.3, 25)),
+									new Vector2(64 * 4.3, BUTTON_HEIGHT)),
 		
 				// Action
 				action : function() { 
@@ -34,7 +39,7 @@
 				
 				// Button hitbox
 				col : new Clickable(new Vector2(GUI_WIDTH * .5, GUI_HEIGHT * .5 + OFFSET * 1),
-									new Vector2(64 * 4.3, 25)),
+									new Vector2(64 * 4.3, BUTTON_HEIGHT)),
 				
 				// Action
 				action : function() { 
@@ -48,13 +53,19 @@
 	
 	global.pause_game_popup = {
 		title: "Jogo Pausado!",
+		
+		escape_action : function() { 
+			global.speed = global.def_speed;
+			instance_destroy(obj_popup);
+		},
+		
 		buttons : [
 			{
 				title : "Continuar",
 				
 				// Button hitbox
 				col : new Clickable(new Vector2(GUI_WIDTH * .5, GUI_HEIGHT * .5 + OFFSET * 0),
-									new Vector2(64 * 3, 25)),
+									new Vector2(64 * 3, BUTTON_HEIGHT)),
 		
 				// Action
 				action : function() { 
@@ -68,7 +79,7 @@
 				
 				// Button hitbox
 				col : new Clickable(new Vector2(GUI_WIDTH * .5, GUI_HEIGHT * .5 + OFFSET * 1),
-									new Vector2(64 * 5, 25)),
+									new Vector2(64 * 5, BUTTON_HEIGHT)),
 				
 				// Action
 				action : function() { 
@@ -81,13 +92,18 @@
 	
 	global.exit_game_popup = {
 		title : "Voce deseja sair?",
+		
+		escape_action : function() {
+			instance_destroy(obj_popup);
+		},
+		
 		buttons : [
 			{
 				title : "Sim",
 							
 				// Button hitbox
 				col : new Clickable(new Vector2(GUI_WIDTH * .5, GUI_HEIGHT * .5 + OFFSET * 0),
-									new Vector2(64, 25)),
+									new Vector2(64, BUTTON_HEIGHT)),
 		
 				// Goto gameplay room
 				action : function() { game_end(); },
@@ -97,7 +113,7 @@
 				title : "Nao",
 				// Button hitbox
 				col : new Clickable(new Vector2(GUI_WIDTH * .5, GUI_HEIGHT * .5 + OFFSET * 1),
-									new Vector2(64 * 2.5, 25)),
+									new Vector2(64 * 2.5, BUTTON_HEIGHT)),
 							
 				// Destroy popups
 				action : function() { instance_destroy(obj_popup); },
@@ -107,13 +123,14 @@
 
 	global.main_menu = {
 		title : "Flappy",
+		
 		buttons : 
 		[
 			{
 				title : "Jogar",
 				// Button hitbox
 				col : new Clickable(new Vector2(GUI_WIDTH * .5, GUI_HEIGHT * .5 + OFFSET * 0),
-									new Vector2(64 * 1.5, 25)),
+									new Vector2(64 * 1.5, BUTTON_HEIGHT)),
 		
 				// Goto gameplay room
 				action : function() { room_goto(rm_gameplay) },
@@ -123,7 +140,7 @@
 				title : "Opcoes",
 				// Button hitbox
 				col : new Clickable(new Vector2(GUI_WIDTH * .5, GUI_HEIGHT * .5 + OFFSET * 1),
-									new Vector2(64 * 2.5, 25)),
+									new Vector2(64 * 2.5, BUTTON_HEIGHT)),
 							
 				// Goto settings room
 				action : function() { room_goto(rm_settings); },
@@ -132,7 +149,7 @@
 			{
 				title: "Sair",
 				col : new Clickable(new Vector2(GUI_WIDTH * .5, GUI_HEIGHT * .5 + OFFSET * 2),
-									new Vector2(64 * 1.3, 25)),
+									new Vector2(64 * 1.3, BUTTON_HEIGHT)),
 							
 				// Create popup
 				action : function() { 
@@ -144,6 +161,7 @@
 	
 	global.settings_menu = {
 		title : "Opcoes",
+		
 		buttons : 
 		[	
 			{
@@ -151,7 +169,7 @@
 		
 				// Button hitbox
 				col : new Clickable(new Vector2(GUI_WIDTH * .5, GUI_HEIGHT * .5 + OFFSET * 0),
-									new Vector2(64 * 6.3, 25)),
+									new Vector2(64 * 6.3, BUTTON_HEIGHT)),
 		
 				// Update and redraw slider
 				slide : function(_slide) {	
@@ -187,7 +205,7 @@
 				title : "Tela Cheia: OFF",
 				// Button hitbox
 				col : new Clickable(new Vector2(GUI_WIDTH * .5, GUI_HEIGHT * .5 + OFFSET * 1),
-									new Vector2(64 * 5, 25)),
+									new Vector2(64 * 5, BUTTON_HEIGHT)),
 							
 				// Set window to fullscreen	
 				action : function() {	window_set_fullscreen(!window_get_fullscreen()); 
@@ -199,7 +217,7 @@
 				title: "Voltar",
 				// Button hitbox
 				col : new Clickable(new Vector2(GUI_WIDTH * .5, GUI_HEIGHT * .5 + OFFSET * 2),
-									new Vector2(64 * 2.0, 25)),
+									new Vector2(64 * 2.0, BUTTON_HEIGHT)),
 							
 				// Return to main menu
 				action : function() { room_goto(rm_menu); }

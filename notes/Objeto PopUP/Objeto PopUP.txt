@@ -1,0 +1,3 @@
+O objeto popup deriva do objeto menu e compartilha muita de suas propriedades, no entanto
+também tem algumas funções próprias sendo:
+escape_action(): Quais tarefas serão executadas após a tecla esc ser pressionada

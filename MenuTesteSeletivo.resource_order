@@ -16,9 +16,9 @@
     {"name":"obj_game","order":1,"path":"objects/obj_game/obj_game.yy",},
     {"name":"Initialize","order":3,"path":"scripts/Initialize/Initialize.yy",},
     {"name":"Script math","order":3,"path":"notes/Script math/Script math.yy",},
+    {"name":"Objeto PopUP","order":4,"path":"notes/Objeto PopUP/Objeto PopUP.yy",},
     {"name":"Script mouse input","order":1,"path":"notes/Script mouse input/Script mouse input.yy",},
     {"name":"Math","order":2,"path":"scripts/Math/Math.yy",},
-    {"name":"Popup de saída","order":4,"path":"notes/Popup de saída/Popup de saída.yy",},
     {"name":"obj_popup","order":1,"path":"objects/obj_popup/obj_popup.yy",},
   ],
 }
