@@ -20,7 +20,7 @@
 				
 				// Button hitbox
 				col : new Clickable(new Vector2(GUI_WIDTH * .5, GUI_HEIGHT * .5 + OFFSET * 0),
-									new Vector2(64, 25)),
+									new Vector2(64 * 4.3, 25)),
 		
 				// Action
 				action : function() { 
@@ -34,14 +34,14 @@
 				
 				// Button hitbox
 				col : new Clickable(new Vector2(GUI_WIDTH * .5, GUI_HEIGHT * .5 + OFFSET * 1),
-									new Vector2(64, 25)),
+									new Vector2(64 * 4.3, 25)),
 				
 				// Action
 				action : function() { 
-										global.speed = global.def_speed; 
-										global.score = 0; 
-										room_goto(rm_menu); 
-									},
+					global.speed = global.def_speed; 
+					global.score = 0; 
+					room_goto(rm_menu); 
+				},
 			},
 		]
 	}
@@ -54,7 +54,7 @@
 				
 				// Button hitbox
 				col : new Clickable(new Vector2(GUI_WIDTH * .5, GUI_HEIGHT * .5 + OFFSET * 0),
-									new Vector2(64, 25)),
+									new Vector2(64 * 3, 25)),
 		
 				// Action
 				action : function() { 
@@ -68,10 +68,13 @@
 				
 				// Button hitbox
 				col : new Clickable(new Vector2(GUI_WIDTH * .5, GUI_HEIGHT * .5 + OFFSET * 1),
-									new Vector2(64, 25)),
+									new Vector2(64 * 5, 25)),
 				
 				// Action
-				action : function() { room_goto(rm_menu); },
+				action : function() { 
+					global.speed = global.def_speed; 
+					room_goto(rm_menu); 
+				},
 			},
 		]
 	}
@@ -133,8 +136,8 @@
 							
 				// Create popup
 				action : function() { 
-						instance_create_layer(0, 0, "PopUP", obj_popup, global.exit_game_popup);
-					}
+					instance_create_layer(0, 0, "PopUP", obj_popup, global.exit_game_popup);
+				}
 			}
 		]
 	}
