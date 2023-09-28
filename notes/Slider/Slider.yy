@@ -4,6 +4,6 @@
   "name": "Slider",
   "parent": {
     "name": "Docs",
-    "path": "folders/Docs.yy",
+    "path": "folders/Game/Docs.yy",
   },
 }

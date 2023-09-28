@@ -4,6 +4,6 @@
   "name": "Popup de saída",
   "parent": {
     "name": "Docs",
-    "path": "folders/Docs.yy",
+    "path": "folders/Game/Docs.yy",
   },
 }

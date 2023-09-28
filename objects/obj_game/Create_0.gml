@@ -1,4 +1,5 @@
 /// @description Init
 
-// Global volume slider
-global.volume = 0;
+// Spawner parameters
+spawner_timer_def = 2000;
+spawner_timer = undefined;

@@ -22,4 +22,8 @@ function Clickable(_pos = new Vector2(), _size = new Vector2(64, 20)) constructo
 	function detect_collision(_pos) {
 		return point_in_rectangle(_pos.x, _pos.y, lurd.l, lurd.u, lurd.r, lurd.d);
 	}
+	
+	function relative_collider_position(_pos, _offset = new Vector2(0, 0)) {
+		return new Vector2(_pos.x - (lurd.l + _offset.x), _pos.y - (lurd.u + _offset.y));
+	}
 }

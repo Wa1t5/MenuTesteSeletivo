@@ -4,6 +4,6 @@
   "name": "Script mouse input",
   "parent": {
     "name": "Docs",
-    "path": "folders/Docs.yy",
+    "path": "folders/Game/Docs.yy",
   },
 }
