@@ -1,4 +1,0 @@
-O script mouse input tem como objetivo facilitar a interação entre os botões
-e o mouse, ou sinceramente qualquer outra coisa que vá colidir com ele
-já que a função detect_collision() apenas requer uma posição, ele usa o 
-LURD(left, up, right, down) para centralizar a colisão com o botão
