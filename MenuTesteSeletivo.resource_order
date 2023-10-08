@@ -1,4 +1,18 @@
 {
-  "FolderOrderSettings": [],
-  "ResourceOrderSettings": [],
+  "FolderOrderSettings": [
+    {"name":"Code","order":1,"path":"folders/Code.yy",},
+    {"name":"Game","order":1,"path":"folders/Code/Game.yy",},
+    {"name":"Libs","order":1,"path":"folders/Code/Game/Libs.yy",},
+    {"name":"GUIS","order":2,"path":"folders/Code/GUIS.yy",},
+    {"name":"Assets","order":2,"path":"folders/Assets.yy",},
+    {"name":"Fonts","order":1,"path":"folders/Assets/Fonts.yy",},
+    {"name":"Sprites","order":2,"path":"folders/Assets/Sprites.yy",},
+  ],
+  "ResourceOrderSettings": [
+    {"name":"Math","order":3,"path":"scripts/Math/Math.yy",},
+    {"name":"DrawUtils","order":2,"path":"scripts/DrawUtils/DrawUtils.yy",},
+    {"name":"fnt_test","order":1,"path":"fonts/fnt_test/fnt_test.yy",},
+    {"name":"rm_main_menu","order":3,"path":"rooms/rm_main_menu/rm_main_menu.yy",},
+    {"name":"GUI","order":1,"path":"scripts/GUI/GUI.yy",},
+  ],
 }
